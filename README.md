@@ -1,5 +1,5 @@
 # React4s Example
-Search in Spotify artists. A small example of an [React4s](https://github.com/Ahnfelt/react4s) application.
+Search in Spotify artists. A small example of a [React4s](https://github.com/Ahnfelt/react4s) application.
 
 This example project features:
 
