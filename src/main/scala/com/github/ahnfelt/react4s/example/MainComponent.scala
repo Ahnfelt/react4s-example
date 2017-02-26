@@ -31,8 +31,8 @@ case class MainComponent() extends Component[NoEmit] {
             ),
             E.div(
                 Component(LoadingComponent).withKey("loading").when(artists.loading()),
-                Tags(artists().map(results => Component(ResultsComponent, results).withKey("results"))),
-                Tags(artists.error().map(e => Component(ErrorComponent, e.getMessage).withKey("error")))
+                Tags(artists.error().map(e => Component(ErrorComponent, e.getMessage).withKey("error"))),
+                Tags(artists().map(results => Component(ResultsComponent, results).withKey("results")))
             )
         )
     }
