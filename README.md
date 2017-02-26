@@ -1,5 +1,5 @@
-# react4s-example
-An example of React4s: Search in Spotify artists.
+# React4s Example
+Search in Spotify artists. A small example of an React4s application.
 
 This example project features:
 
