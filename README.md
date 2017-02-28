@@ -1,7 +1,7 @@
 # React4s Example
 Search in Spotify artists. A small example of a [React4s](https://github.com/Ahnfelt/react4s) application.
 
-# Online demo
+# Online Demo
 
 http://ting.ahnfelt.dk/react4s/spotify/
 
