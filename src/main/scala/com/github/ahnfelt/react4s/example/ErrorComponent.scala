@@ -3,9 +3,9 @@ package com.github.ahnfelt.react4s.example
 import com.github.ahnfelt.react4s._
 
 case class ErrorComponent(error : P[String]) extends Component[NoEmit] {
-    override def render() : Element = E.div(
+    override def render(get : Get) : Element = E.div(
         ErrorCss,
-        Text("Error: " + Option(error()).getOrElse("Couldn't load artists."))
+        Text("Error: " + Option(get(error)).getOrElse("Couldn't load artists."))
     )
 }
 

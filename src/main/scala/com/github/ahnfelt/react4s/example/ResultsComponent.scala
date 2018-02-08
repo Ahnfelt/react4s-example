@@ -6,12 +6,12 @@ case class ResultsComponent(results : P[List[Artist]]) extends Component[NoEmit]
 
     val timeout = Timeout(this, results)(_ => 100)
 
-    override def render() : Element = E.div(
+    override def render(get : Get) : Element = E.div(
         ResultsCss,
-        Tags(for((artist, index) <- results().zipWithIndex) yield E.a(
+        Tags(for((artist, index) <- get(results).zipWithIndex) yield E.a(
             ArtistCss,
             S("transition-delay").ms(index * 100),
-            S("opacity", "1").when(timeout()),
+            S("opacity", "1").when(get(timeout)),
             A.href(artist.url),
             A.target("_blank"),
             Tags(artist.images.headOption.map(i => S("background-image").url(i.url))),

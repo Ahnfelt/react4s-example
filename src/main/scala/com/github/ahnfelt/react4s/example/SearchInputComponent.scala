@@ -3,13 +3,13 @@ package com.github.ahnfelt.react4s.example
 import com.github.ahnfelt.react4s._
 
 case class SearchInputComponent(query : P[String]) extends Component[String] {
-    override def render() : Element = E.div(
+    override def render(get : Get) : Element = E.div(
         SearchInputCss,
         E.input(
             InputCss,
             A.placeholder("Search Spotify"),
             A.autoFocus(),
-            A.value(query()),
+            A.value(get(query)),
             A.onChangeText(q => emit(q))
         )
     )

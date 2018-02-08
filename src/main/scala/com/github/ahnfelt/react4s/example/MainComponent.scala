@@ -24,15 +24,15 @@ case class MainComponent() extends Component[NoEmit] {
         }
     }
 
-    override def render() : Element = {
+    override def render(get : Get) : Element = {
         E.div(
             E.div(
-                Component(SearchInputComponent, query()).withHandler(q => query.set(q))
+                Component(SearchInputComponent, get(query)).withHandler(q => query.set(q))
             ),
             E.div(
-                Component(LoadingComponent).withKey("loading").when(artists.loading()),
-                Tags(artists.error().map(e => Component(ErrorComponent, e.getMessage).withKey("error"))),
-                Tags(artists().map(results => Component(ResultsComponent, results).withKey("results")))
+                Component(LoadingComponent).withKey("loading").when(get(artists.loading)),
+                Tags(get(artists.error).map(e => Component(ErrorComponent, e.getMessage).withKey("error"))),
+                Tags(get(artists).map(results => Component(ResultsComponent, results).withKey("results")))
             )
         )
     }
