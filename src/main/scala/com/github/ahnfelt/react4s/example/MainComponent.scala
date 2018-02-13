@@ -14,7 +14,7 @@ case class MainComponent() extends Component[NoEmit] {
 
     val artists = Loader(this, debouncedQuery) { q =>
         if(q.trim.isEmpty) Future.successful(List()) else {
-            Ajax.get("https://api.spotify.com/v1/search?q=" + js.URIUtils.encodeURIComponent(q) + "&type=artist").
+            Ajax.get("http://show.ahnfelt.net/react4s-spotify/?q=" + js.URIUtils.encodeURIComponent(q) + "&type=artist").
                 map { ajax =>
                     js.JSON.parse(ajax.responseText).
                         artists.items.
