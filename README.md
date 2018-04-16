@@ -1,13 +1,7 @@
 # React4s Example
-Search in Spotify artists. A small example of a [React4s](https://github.com/Ahnfelt/react4s) application.
+Search in Spotify artists. A small example of a [React4s](https://github.com/Ahnfelt/react4s) application. This example has been superseeded by the corresponding example on [react4s.org](http://www.react4s.org) - and there are many more examples there.
 
-**Online Demo**: http://ting.ahnfelt.dk/react4s/spotify/
-
-# Features
-
-  - Ajax with proper loading and errors
-  - Debounced input field (to avoid making too many API requests)
-  - CSS transitions
+**Online Demo**: http://www.react4s.org/examples/spotify-search
 
 # Disclaimer
 
